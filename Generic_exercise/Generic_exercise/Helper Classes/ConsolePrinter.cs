@@ -1,4 +1,6 @@
-﻿namespace Generic_exercise
+﻿using Generic_exercise.Entities;
+
+namespace Generic_exercise
 {
     internal class ConsolePrinter : IPrinter
     {
@@ -21,7 +23,7 @@
             Console.ForegroundColor = ConsoleColor.DarkCyan;
             foreach ( var item in collection )
             {
-                Console.Write( $"{item} " );
+                Console.Write( $"{item.ToString()} " );
             }
             Console.WriteLine();
         }
@@ -36,7 +38,14 @@
 
             foreach ( var item in collection )
             {
-                Console.Write( $"{item} " );
+                if ( item is IGameCharacter character )
+                {
+                    Console.Write( $"{character.Name}({character.Health}) " );
+                }
+                else
+                {
+                    Console.Write( $"{item.ToString()} " );
+                }
             }
 
             Console.WriteLine( "\n" );
