@@ -1,36 +1,36 @@
-﻿namespace Generic_exercise
+﻿namespace Generic_exercise.MergeAndSortCollections
 {
     public static class ExtensionMethods
     {
         // Solution #1
-        public static IEnumerable<T> MergeWithSorting_Solution_1<T>( this IEnumerable<T> first, IEnumerable<T> second, Func<T, T, int> sortingFunc )
+        public static IEnumerable<T> MergeWithSorting_Solution_1<T>(this IEnumerable<T> first, IEnumerable<T> second, Func<T, T, int> sortingFunc)
         {
-            var mergedList = first.Concat( second ).ToList();
-            mergedList.Sort( new Comparison<T>( sortingFunc ) );
+            var mergedList = first.Concat(second).ToList();
+            mergedList.Sort(new Comparison<T>(sortingFunc));
             return mergedList;
         }
 
 
         // Solution #2
-        public static IEnumerable<T> MergeWithSorting_Solution_2<T>( this IEnumerable<T> first, IEnumerable<T> second, IComparer<T> comparer )
+        public static IEnumerable<T> MergeWithSorting_Solution_2<T>(this IEnumerable<T> first, IEnumerable<T> second, IComparer<T> comparer)
         {
-            var merged = first.Concat( second );
-            return merged.OrderBy( x => x, comparer );
+            var merged = first.Concat(second);
+            return merged.OrderBy(x => x, comparer);
         }
 
 
         // Solution #3
-        public static IEnumerable<T> MergeWithSorting_Solution_3<T>( this IEnumerable<T> first, IEnumerable<T> second, Func<T, T, int> comparison )
+        public static IEnumerable<T> MergeWithSorting_Solution_3<T>(this IEnumerable<T> first, IEnumerable<T> second, Func<T, T, int> comparison)
         {
-            return first.Concat( second ).OrderBy( x => x, Comparer<T>.Create( ( a, b ) => comparison( a, b ) ) );
+            return first.Concat(second).OrderBy(x => x, Comparer<T>.Create((a, b) => comparison(a, b)));
         }
 
         // Solution 4
-        public static IEnumerable<T> MergeWithSorting_Solution_4<T>( this IEnumerable<T> first, IEnumerable<T> second, Func<T, T, bool> sortingFunc )
+        public static IEnumerable<T> MergeWithSorting_Solution_4<T>(this IEnumerable<T> first, IEnumerable<T> second, Func<T, T, bool> sortingFunc)
         {
-            var mergedCollection = first.Concat( second );
+            var mergedCollection = first.Concat(second);
 
-            return mergedCollection.OrderBy( item => item, Comparer<T>.Create( ( x, y ) => sortingFunc( x, y ) ? -1 : 1 ) );
+            return mergedCollection.OrderBy(item => item, Comparer<T>.Create((x, y) => sortingFunc(x, y) ? -1 : 1));
         }
 
 

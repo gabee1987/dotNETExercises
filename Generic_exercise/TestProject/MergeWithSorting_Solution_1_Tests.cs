@@ -1,3 +1,5 @@
+using Generic_exercise.MergeAndSortCollections;
+
 namespace TestProject
 {
     [TestFixture]

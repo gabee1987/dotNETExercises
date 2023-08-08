@@ -1,4 +1,6 @@
-﻿namespace TestProject
+﻿using Generic_exercise.MergeAndSortCollections;
+
+namespace TestProject
 {
     internal class MergeWithSorting_Solution_3_Tests
     {

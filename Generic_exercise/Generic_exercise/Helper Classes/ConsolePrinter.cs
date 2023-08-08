@@ -1,6 +1,4 @@
-﻿using System.Drawing;
-
-namespace Generic_exercise
+﻿namespace Generic_exercise
 {
     internal class ConsolePrinter : IPrinter
     {

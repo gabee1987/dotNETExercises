@@ -1,7 +1,10 @@
 ﻿using Generic_exercise;
+using Generic_exercise.MergeAndSortCollections;
 
 #region Init
 var printer = new ConsolePrinter();
+
+#region MergeAndSortCollections
 var examples_1 = new SolutionExamples_1();
 var examples_2 = new SolutionExamples_2();
 var examples_3 = new SolutionExamples_3();
@@ -16,7 +19,7 @@ string description2 = "Merged and sorted int collection in reverse";
 string description3 = "Merged and sorted string collection";
 string description4 = "Merged and sorted string collection in reverse";
 
-// Title
+// MergeAndSortCollections Title
 printer.PrintLine( "Solutions to merge and sort two collections with a generic extension method and custom sorting function passed as parameter" );
 
 printer.Print( "First original int collection: " );
@@ -29,10 +32,11 @@ printer.PrintCollection( stringArray1 );
 printer.Print( "Second original string collection: " );
 printer.PrintCollection( stringArray2 );
 #endregion
+#endregion
 
 
 
-#region Solution #1
+#region MergeAndSortCollections Solution #1
 printer.PrintTitle( "Solution 1" );
 
 // Example 1
@@ -53,7 +57,7 @@ printer.PrintResult( result1_4, 1, description4 );
 #endregion
 
 
-#region Solution #2
+#region MergeAndSortCollections Solution #2
 printer.PrintTitle( "Solution 2" );
 
 // Example 1
@@ -74,7 +78,7 @@ printer.PrintResult( result2_4, 1, description4 );
 #endregion
 
 
-#region Solution #3
+#region MergeAndSortCollections Solution #3
 printer.PrintTitle( "Solution 3" );
 
 // Example 1
@@ -95,7 +99,7 @@ printer.PrintResult( result3_4, 1, description4 );
 #endregion
 
 
-#region Solution #4
+#region MergeAndSortCollections Solution #4
 printer.PrintTitle( "Solution 4" );
 
 // Example 1
