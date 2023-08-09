@@ -3,6 +3,6 @@
     public interface IGameCharacter
     {
         string Name { get; }
-        int Health { get; }
+        int Level { get; }
     }
 }

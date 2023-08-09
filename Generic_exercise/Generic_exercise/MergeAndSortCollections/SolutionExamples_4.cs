@@ -94,12 +94,12 @@ namespace Generic_exercise.MergeAndSortCollections
 
         public static bool GameCharacterSortByHealthAscending( IGameCharacter x, IGameCharacter y )
         {
-            return x.Health < y.Health;
+            return x.Level < y.Level;
         }
 
         public static bool GameCharacterSortByHealthDescending( IGameCharacter x, IGameCharacter y )
         {
-            return x.Health > y.Health;
+            return x.Level > y.Level;
         }
     }
 }

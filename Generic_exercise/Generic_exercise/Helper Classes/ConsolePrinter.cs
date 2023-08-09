@@ -40,7 +40,7 @@ namespace Generic_exercise
             {
                 if ( item is IGameCharacter character )
                 {
-                    Console.Write( $"{character.Name}({character.Health}) " );
+                    Console.Write( $"{character.Name}({character.Level}) " );
                 }
                 else
                 {

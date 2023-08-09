@@ -25,12 +25,20 @@
             return first.Concat(second).OrderBy(x => x, Comparer<T>.Create((a, b) => comparison(a, b)));
         }
 
+
         // Solution 4
         public static IEnumerable<T> MergeWithSorting_Solution_4<T>(this IEnumerable<T> first, IEnumerable<T> second, Func<T, T, bool> sortingFunc)
         {
             var mergedCollection = first.Concat(second);
 
             return mergedCollection.OrderBy(item => item, Comparer<T>.Create((x, y) => sortingFunc(x, y) ? -1 : 1));
+        }
+
+
+        // Solution 5
+        public static IEnumerable<T> MergeWithSorting_Solution_5<T, Tkey>( this IEnumerable<T> first, IEnumerable<T> second, Func<T, Tkey> keySelector, bool descending = false )
+        {
+            return descending ? first.Concat( second ).OrderByDescending( keySelector ) : first.Concat( second ).OrderBy( keySelector );
         }
 
 
