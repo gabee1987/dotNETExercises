@@ -45,14 +45,14 @@ namespace Generic_exercise.MergeAndSortCollections
             return result;
         }
 
-        public IEnumerable<IGameCharacter> MergeWithSorting_Entity_SortedByHealth_Ascending( IEnumerable<IGameCharacter> firstCollection, IEnumerable<IGameCharacter> secondCollection )
+        public IEnumerable<IGameCharacter> MergeWithSorting_Entity_SortedByLevel_Ascending( IEnumerable<IGameCharacter> firstCollection, IEnumerable<IGameCharacter> secondCollection )
         {
 
             var result = firstCollection.MergeWithSorting_Solution_4( secondCollection, SortingUtilities.GameCharacterSortByHealthAscending );
             return result;
         }
 
-        public IEnumerable<IGameCharacter> MergeWithSorting_Entity_SortedByHealth_Descending( IEnumerable<IGameCharacter> firstCollection, IEnumerable<IGameCharacter> secondCollection )
+        public IEnumerable<IGameCharacter> MergeWithSorting_Entity_SortedByLevel_Descending( IEnumerable<IGameCharacter> firstCollection, IEnumerable<IGameCharacter> secondCollection )
         {
 
             var result = firstCollection.MergeWithSorting_Solution_4( secondCollection, SortingUtilities.GameCharacterSortByHealthDescending );

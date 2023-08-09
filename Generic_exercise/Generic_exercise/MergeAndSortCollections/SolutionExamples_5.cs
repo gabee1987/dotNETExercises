@@ -17,17 +17,17 @@ namespace Generic_exercise.MergeAndSortCollections
             return result;
         }
 
-        public IEnumerable<IGameCharacter> MergeWithSorting_Entity_SortedByHealth_Ascending( IEnumerable<IGameCharacter> firstCollection, IEnumerable<IGameCharacter> secondCollection )
+        public IEnumerable<IGameCharacter> MergeWithSorting_Entity_SortedByLevel_Ascending( IEnumerable<IGameCharacter> firstCollection, IEnumerable<IGameCharacter> secondCollection )
         {
 
-            var result = firstCollection.MergeWithSorting_Solution_5( secondCollection, character => character.Name );
+            var result = firstCollection.MergeWithSorting_Solution_5( secondCollection, character => character.Level );
             return result;
         }
 
-        public IEnumerable<IGameCharacter> MergeWithSorting_Entity_SortedByHealth_Descending( IEnumerable<IGameCharacter> firstCollection, IEnumerable<IGameCharacter> secondCollection )
+        public IEnumerable<IGameCharacter> MergeWithSorting_Entity_SortedByLevel_Descending( IEnumerable<IGameCharacter> firstCollection, IEnumerable<IGameCharacter> secondCollection )
         {
 
-            var result = firstCollection.MergeWithSorting_Solution_5( secondCollection, character => character.Name, descending: true );
+            var result = firstCollection.MergeWithSorting_Solution_5( secondCollection, character => character.Level, descending: true );
             return result;
         }
     }

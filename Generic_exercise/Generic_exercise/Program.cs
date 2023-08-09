@@ -153,11 +153,11 @@ var result1_6 = examples_4.MergeWithSorting_Entity_SortedByName_Descending( char
 printer.PrintResult( result1_6, 4, description6 );
 
 // Example 7
-var result1_7 = examples_4.MergeWithSorting_Entity_SortedByHealth_Ascending( characterList1, characterList2 );
+var result1_7 = examples_4.MergeWithSorting_Entity_SortedByLevel_Ascending( characterList1, characterList2 );
 printer.PrintResult( result1_7, 4, description7 );
 
 // Example 8
-var result1_8 = examples_4.MergeWithSorting_Entity_SortedByHealth_Descending( characterList1, characterList2 );
+var result1_8 = examples_4.MergeWithSorting_Entity_SortedByLevel_Descending( characterList1, characterList2 );
 printer.PrintResult( result1_8, 4, description8 );
 #endregion
 
@@ -173,11 +173,11 @@ var result5_2 = examples_4.MergeWithSorting_Entity_SortedByName_Descending( char
 printer.PrintResult( result5_2, 5, description6 );
 
 // Example 3
-var result5_3 = examples_4.MergeWithSorting_Entity_SortedByHealth_Ascending( characterList1, characterList2 );
+var result5_3 = examples_4.MergeWithSorting_Entity_SortedByLevel_Ascending( characterList1, characterList2 );
 printer.PrintResult( result5_3, 5, description7 );
 
 // Example 4
-var result5_4 = examples_4.MergeWithSorting_Entity_SortedByHealth_Descending( characterList1, characterList2 );
+var result5_4 = examples_4.MergeWithSorting_Entity_SortedByLevel_Descending( characterList1, characterList2 );
 printer.PrintResult( result5_4, 5, description8 );
 #endregion
 
